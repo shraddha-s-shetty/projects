@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d7bdd6-4859-44b4-983f-811f2be27bac" name="Changes" comment="New commit" />
+    <list default="true" id="a0d7bdd6-4859-44b4-983f-811f2be27bac" name="Changes" comment="Added log files and db file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.StickyNote/sticky_notes/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/3.StickyNote/sticky_notes/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.StickyNote/sticky_notes/sticky_note_app2.py" beforeDir="false" afterPath="$PROJECT_DIR$/3.StickyNote/sticky_notes/sticky_note_app2.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690472918314</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added log files and db file">
+      <created>1690473217988</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690473217988</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +116,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="New commit" />
+    <MESSAGE value="Added log files and db file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added log files and db file" />
   </component>
 </project>

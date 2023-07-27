@@ -9,11 +9,6 @@ import logging
 logging.basicConfig(filename='app.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-Times_New_Roman = ('Times New Roman', 12)
-Calibri = ('Calibri', 14)
-Century_Gothic = ('Century Gothic', 16)
-Verdana = ('Verdana', 20)
-
 global index
 global curr_index
 
@@ -59,20 +54,16 @@ def change_second_frame_style(style):
     """
     Function to change the style of the second frame text widget based on the given style.
     """
-    if style == "Bold":
-        tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Font(weight="bold"))
-    elif style == "Italic":
-        tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Font(slant="italic"))
-    elif style == "Underline":
-        tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Font(underline=True))
-    elif style == "Times_New_Roman":
-        tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Times_New_Roman)
-    elif style == "Calibri":
-        tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Calibri)
-    elif style == "Century_Gothic":
-        tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Century_Gothic)
-    elif style == "Verdana":
-        tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Verdana)
+    Fonts = {
+        "Bold": Font(weight="bold"),
+        "Italic": Font(slant="italic"),
+        "Underline": Font(underline=True),
+        "Times_New_Roman": ('Times New Roman', 12),
+        "Calibri": ('Calibri', 14),
+        "Century_Gothic": ('Century Gothic', 16),
+        "Verdana": ('Verdana', 20)
+    }
+    tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Fonts[style])
 
 
 class StickyNoteWindow:
@@ -292,14 +283,14 @@ class FirstWindow:
         scrollbar = Scrollbar(canvas, command=canvas.yview)
         scrollbar.pack(side=RIGHT, fill=Y)
 
-        def on_canvas_configure(event: object) -> object:
+        def on_canvas_configure(event):
             canvas.configure(scrollregion=canvas.bbox("all"))
 
         canvas.configure(yscrollcommand=scrollbar.set)
         canvas.bind("<Configure>", on_canvas_configure)
 
         tk_window_dict[f"main_frame"] = Frame(canvas)
-        canvas.create_window(canvas.winfo_width() // 2, 0, window=tk_window_dict[f"main_frame"], anchor="n")
+        canvas.create_window(canvas.winfo_width() // 2, 0, window=tk_window_dict[f"main_frame"], anchor="nw")
 
         sql_statement = "SELECT title FROM sticky_notes_db"
         self.db.cursor.execute(sql_statement)
