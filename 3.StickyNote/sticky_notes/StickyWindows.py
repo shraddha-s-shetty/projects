@@ -1,4 +1,5 @@
-import sqlite3 as sql
+from DatabaseConnection import *
+from logger import *
 from tkinter import messagebox
 from tkinter import *
 from tkinter.ttk import *
@@ -6,16 +7,16 @@ from tkinter.font import Font
 from ttkthemes import ThemedStyle
 import logging
 
-logging.basicConfig(filename='app.log', level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
-
-global index
 global curr_index
-
-curr_index = 0
-index = 0
-
+global index
+global button_list
+global button_dict
 global tk_window_dict
+
+curr_index: int = 0
+index = 0
+button_list = []
+button_dict = {}
 tk_window_dict = {}
 
 
@@ -23,31 +24,18 @@ def on_window_click(event):
     """
     Callback function to handle window click events and set the current index accordingly.
     """
-    global curr_index
     focused_widget = event.widget.focus_get()
     if focused_widget:
+        global curr_index
         curr_index = focused_widget.winfo_toplevel().title()
         print('curr_index', curr_index)
-        logging.info(f"Current Window Title: {curr_index}")
+        message = f"Current Window Title: {curr_index}"
+        log_message(message)
         return curr_index
     else:
-        logging.info("No focused window.")
+        message = "No focused window."
+        log_message(message)
         return 0
-
-
-class Database:
-    """
-    Database class to manage SQLite operations.
-    """
-    def __init__(self):
-        try:
-            self.connection = sql.connect('sticky_notes_db.db')
-            self.cursor = self.connection.cursor()
-            self.cursor.execute('''CREATE TABLE IF NOT EXISTS sticky_notes_db
-                             (title text, notes text, color text, font text)''')
-            logging.info("self.connection to Database")
-        except Exception as e:
-            logging.exception(e)
 
 
 def change_second_frame_style(style):
@@ -64,7 +52,82 @@ def change_second_frame_style(style):
         "Verdana": ('Verdana', 20)
     }
     tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(font=Fonts[style])
+    message = (f"Changed the Font of the sticky note StickyNoteWindow.inputtxt_{curr_index}")
+    log_message(message)
 
+class SqlLite:
+    """
+    Class to manage the database operations
+    """
+    def __init__(self):
+        self.db = Database()
+        self.title = None
+        self.notes = None
+        self.color = None
+        self.font = None
+        global curr_index
+
+
+    def add_note(self):
+        self.title = tk_window_dict[f"StickyNoteWindow.heading_{curr_index}"].get()
+        self.notes = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].get("1.0", "end-1c")
+        self.color = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("background")
+        self.font = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("font")
+
+        if not self.title or not self.notes:
+            messagebox.showerror(message="Enter Title!")
+        else:
+            self.db.cursor.execute("SELECT title from sticky_notes_db WHERE title=? and notes=?",
+                                   (self.title, self.notes))
+            title_check = self.db.cursor.fetchall()
+            self.db.connection.commit()
+            if len(title_check) == 0:
+                self.db.connection.commit()
+                self.db.cursor.execute("INSERT INTO sticky_notes_db VALUES (?,?,?,?)",
+                                       (self.title, self.notes, self.color, self.font))
+                messagebox.showinfo(message="Note added")
+                self.db.connection.commit()
+                button_dict[f"{self.title}"] = Button(tk_window_dict[f"main_frame"], text=self.title, command=lambda: OldStickyNote(self.title)).pack()
+                button_list.append(button_dict[f"{self.title}"])
+            else:
+                messagebox.showinfo(message="Title already present!, Please enter a new title")
+
+    def delete_note(self):
+        messagebox.askquestion(message="Do you want to delete the current note")
+
+        self.title = tk_window_dict[f"StickyNoteWindow.heading_{curr_index}"].get()
+        self.notes = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].get("1.0", "end-1c")
+        self.color = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("background")
+        self.font = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("font")
+
+        if not self.title or not self.notes:
+            messagebox.showerror(message="Enter title and note!")
+            return
+        else:
+            sql_statement = "DELETE FROM sticky_notes_db WHERE title=? AND notes=?"
+            self.db.connection.commit()
+            self.db.cursor.execute(sql_statement, (self.title, self.notes))
+            for btn in button_list:
+                if btn['text'] == self.title:
+                    btn.destroy()
+                    break
+        messagebox.showinfo(message="Note Deleted!")
+        self.db.connection.commit()
+
+    def update_note(self):
+        self.title = tk_window_dict[f"StickyNoteWindow.heading_{curr_index}"].get()
+        self.notes = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].get("1.0", "end-1c")
+        self.color = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("background")
+        self.font = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("font")
+
+        if not self.title or not self.notes:
+            messagebox.showerror(message="Enter title and note!")
+        else:
+            self.db.connection.commit()
+            sql_statement = "UPDATE sticky_notes_db SET notes=?,color=?,font=? WHERE title=?"
+            self.db.cursor.execute(sql_statement, (self.notes, self.color, self.font, self.title))
+            messagebox.showinfo(message="Note Updated")
+            self.db.connection.commit()
 
 class StickyNoteWindow:
     """
@@ -72,6 +135,7 @@ class StickyNoteWindow:
     """
     def __init__(self):
         global index
+        global curr_index
         self.db_notes = SqlLite()
 
         tk_window_dict[f"second_window_{index}"] = Tk()
@@ -82,34 +146,35 @@ class StickyNoteWindow:
 
         tk_window_dict[f"second_window_{index}"].title(f"{index}")
 
-        #Creates a new second frame 
+        # Creates a new second frame
         second_frame = Frame(tk_window_dict[f"second_window_{index}"])
         second_frame.pack(fill=BOTH, expand=True)
 
-        #Creates a new third frame
+        # Creates a new third frame
         third_frame = Frame(tk_window_dict[f"second_window_{index}"])
         third_frame.pack(fill=BOTH, expand=True)
 
-        #Theme selection for the window
+        # Theme selection for the window
         style = ThemedStyle(tk_window_dict[f"second_window_{index}"])
         style.set_theme("arc")
 
-        #Creates title with entry widget
+        # Creates title with entry widget
         tk_window_dict[f"StickyNoteWindow.heading_{index}"] = Entry(second_frame)
         tk_window_dict[f"StickyNoteWindow.heading_{index}"].insert(1, "Enter Title Here!")
         tk_window_dict[f"StickyNoteWindow.heading_{index}"].pack(fill=BOTH, expand=True)
 
-        #Creates input text frame
+        # Creates input text frame
         tk_window_dict[f"StickyNoteWindow.inputtxt_{index}"] = Text(third_frame)
         tk_window_dict[f"StickyNoteWindow.inputtxt_{index}"].pack(fill=BOTH, expand=True)
 
         menubar = Menu(tk_window_dict[f"second_window_{index}"])
         tk_window_dict[f"second_window_{index}"].config(menu=menubar)
 
-        #creates a binding on focus to the window to get current window title
+        # creates a binding on focus to the window to get current window title
         global curr_index
         tk_window_dict[f"second_window_{index}"].bind("<Enter>", on_window_click)
-        logging.info(f"curr_index:{curr_index}")
+        message = (f"curr_index:{curr_index}")
+        log_message(message)
 
         file_menu = Menu(menubar, tearoff=0)
         file_menu.add_command(label="New", command=self.new_window)
@@ -156,77 +221,10 @@ class StickyNoteWindow:
         tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].configure(background=color)
 
 
-class SqlLite:
-    '''
-    Class to manage the database operations
-    '''
-    def __init__(self):
-        self.db = Database()
-        self.title = None
-        self.notes = None
-        self.color = None
-        self.font = None
-        global curr_index
-
-    def add_note(self):
-        self.title = tk_window_dict[f"StickyNoteWindow.heading_{curr_index}"].get()
-        self.notes = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].get("1.0", "end-1c")
-        self.color = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("background")
-        self.font = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("font")
-
-        if not self.title or not self.notes:
-            messagebox.showerror(message="ENTER REQUIRED DETAILS")
-        else:
-            self.db.cursor.execute("SELECT title from sticky_notes_db WHERE title=? and notes=?",
-                                   (self.title, self.notes))
-            title_check = self.db.cursor.fetchall()
-            self.db.connection.commit()
-            if len(title_check) == 0:
-                self.db.cursor.execute("INSERT INTO sticky_notes_db VALUES (?,?,?,?)",
-                                       (self.title, self.notes, self.color, self.font))
-                messagebox.showinfo(message="Note added")
-                self.db.connection.commit()
-                Button(tk_window_dict[f"main_frame"], text=self.title, command=lambda: OldStickyNote(self.title)).pack()
-            else:
-                messagebox.showinfo(message="Title already present!, Please enter a new title")
-
-    def delete_note(self):
-        messagebox.askquestion(message="Do you want to delete the current notes")
-
-        self.title = tk_window_dict[f"StickyNoteWindow.heading_{curr_index}"].get()
-        self.notes = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].get("1.0", "end-1c")
-        self.color = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("background")
-        self.font = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("font")
-
-        if not self.title or not self.notes:
-            messagebox.showerror(message="ENTER REQUIRED DETAILS")
-            return
-        else:
-            sql_statement = "DELETE FROM sticky_notes_db WHERE title=? AND notes=?"
-            self.db.cursor.execute(sql_statement, (self.title, self.notes))
-
-        messagebox.showinfo(message="Note Deleted")
-        self.db.connection.commit()
-
-    def update_note(self):
-        self.title = tk_window_dict[f"StickyNoteWindow.heading_{curr_index}"].get()
-        self.notes = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].get("1.0", "end-1c")
-        self.color = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("background")
-        self.font = tk_window_dict[f"StickyNoteWindow.inputtxt_{curr_index}"].cget("font")
-
-        if not self.title or not self.notes:
-            messagebox.showerror(message="ENTER REQUIRED DETAILS")
-        else:
-            sql_statement = "UPDATE sticky_notes_db SET notes=?,color=?,font=? WHERE title=?"
-            self.db.cursor.execute(sql_statement, (self.notes, self.color, self.font, self.title))
-            messagebox.showinfo(message="Note Updated")
-            self.db.connection.commit()
-
-
 class NewStickyNote:
-    '''
+    """
     class to create a new sticky note
-    '''
+    """
     def __init__(self):
         global index
         index = index + 1
@@ -234,9 +232,9 @@ class NewStickyNote:
 
 
 class OldStickyNote:
-    '''
+    """
     Class to open old note
-    '''
+    """
     def __init__(self, title):
         global index
         index = index + 1
@@ -260,10 +258,11 @@ class OldStickyNote:
         tk_window_dict[f"StickyNoteWindow.inputtxt_{index}"].pack(fill=BOTH, expand=True)
 
 
+
 class FirstWindow:
-    '''
+    """
     Class to create root window
-    '''
+    """
     def __init__(self):
         self.db = Database()
         tk_window_dict[f"main_window"] = Tk()
@@ -296,17 +295,13 @@ class FirstWindow:
         self.db.cursor.execute(sql_statement)
         row = self.db.cursor.fetchall()
         self.db.connection.commit()
-
+        
         Label(tk_window_dict[f"main_frame"], text="Sticky Note Titles").pack(fill=BOTH, expand=True)
         if len(row) <= 0:
             NewStickyNote()
             messagebox.showerror(message="No note found")
         else:
             for k, i in enumerate(row):
-                Button(tk_window_dict[f"main_frame"], text=str(i[0]), command=lambda pi=i[0]: OldStickyNote(pi)).pack(
-                    fill=BOTH, expand=True)
-
-
-if __name__ == '__main__':
-    FirstWindow()
-    mainloop()
+                button_dict[f"{i[0]}"] = Button(tk_window_dict[f"main_frame"], text=str(i[0]), command=lambda pi=i[0]: OldStickyNote(pi))
+                button_dict[f"{i[0]}"].pack(fill=BOTH, expand=True)
+                button_list.append(button_dict[f"{i[0]}"])
