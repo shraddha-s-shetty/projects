@@ -5,6 +5,7 @@ from tkinter.ttk import *
 from tkinter.font import Font
 from ttkthemes import ThemedStyle
 import logging
+from concurrent.futures import *
 
 logging.basicConfig(filename='app.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -340,4 +341,7 @@ class FirstWindow:
                 button_list.append(button_dict[f"{i[0]}"])
 
 if __name__ == '__main__':
-    FirstWindow().mainloop()
+    #FirstWindow().mainloop()
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        future_to_url = executor.submit(FirstWindow().mainloop())
+        
