@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d7bdd6-4859-44b4-983f-811f2be27bac" name="Changes" comment="Added log files and db file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,13 +186,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.sticky_note_app2" />
-      <item itemvalue="Python.test1" />
-      <item itemvalue="Python.logger" />
       <item itemvalue="Python.StickyNoteApp" />
+      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.logger" />
+      <item itemvalue="Python.sticky_note_app2" />
       <item itemvalue="Python.sticky_note_app" />
       <item itemvalue="Python.stickynotealone" />
+      <item itemvalue="Python.test1" />
     </list>
     <recent_temporary>
       <list>
