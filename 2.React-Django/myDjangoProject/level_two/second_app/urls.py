@@ -6,4 +6,5 @@ urlpatterns = [
     #path("admin/", admin.site.urls),
     path("index/", views.index),
     re_path(r"^$", views.index),
+    path("users/", views.users),
 ]

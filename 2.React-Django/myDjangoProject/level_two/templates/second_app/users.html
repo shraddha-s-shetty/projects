@@ -3,23 +3,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Django Guitar Page</title>
+    <title>Django Users Page</title>
     <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/> 
   </head>
   <body>
     <h1>Hi, this is Django level two!</h1>
-    <h2>Here are your access recocrds</h2>
+    <h2>Here are your user records</h2>
     <div class="djangotwo">  
-        {% if access_records %}
+        {% if user_input %}
         <table>
             <thead>
-                <th>Site Name</th>
-                <th>Date Accessed</th>
+                <th>First Name:</th>
+                <th>Last Name:</th>
+                <th>Email:</th>
             </thead>
-            {% for row in access_records %}
+            {% for row in user_input %}
             <tr>
-                <td>{{ row.name }}</td>
-                <td>{{ row.date }}</td>
+                <td>{{ row.first_name }}</td>
+                <td>{{ row.last_name }}</td>
+                <td>{{ row.email }}</td>
             </tr>
             {% endfor %}
         </table>

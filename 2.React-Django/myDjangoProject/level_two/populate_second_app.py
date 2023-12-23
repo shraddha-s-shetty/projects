@@ -8,7 +8,7 @@ django.setup()
 #####FAKE SCRIPT
 
 import random
-from second_app.models import Webpage,Topic,AccessRecord
+from second_app.models import Webpage,Topic,AccessRecord,Users
 from faker import Faker
 
 fakegen = Faker()
@@ -23,16 +23,20 @@ def populate(N=5):
 
     for entry in range(N):
 
-        top = add_topic()
+        # top = add_topic()
 
-        name = fakegen.company()
-        date = fakegen.date()
-        url = fakegen.url()
+        # name = fakegen.company()
+        # date = fakegen.date()
+        # url = fakegen.url()
+        # webpg = Webpage.objects.get_or_create(topic=top,name=name,url= url)[0]
 
-        webpg = Webpage.objects.get_or_create(topic=top,name=name,url= url)[0]
+        # accessrecord = AccessRecord.objects.get_or_create(name = webpg,date = date)[0]
+        firstname = fakegen.first_name()
+        lastname = fakegen.last_name()
+        email = fakegen.email()
 
-        accessrecord = AccessRecord.objects.get_or_create(name = webpg,date = date)[0]
-
+        usr = Users.objects.get_or_create(first_name=firstname,last_name=lastname,email=email)
+        
 if __name__ == '__main__':
     print("Populating script started!")
     populate(40)
