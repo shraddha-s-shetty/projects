@@ -8,9 +8,13 @@
   </head>
   <body>
     <h1>Hi, this is Django level two!</h1>
-    <h2>Here are your user records</h2>
+    <h2>Fill out the form!</h2>
     <div class="container">  
-        {{form}}
+        <form method="POST">
+            {{form.as_p}}
+            {% csrf_token %}
+          <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
     </div>
   </body>
 </html>
