@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from second_app.models import Webpage,Topic,AccessRecord,Users
 from . import forms
+from second_app.forms import NewForms
 # Create your views here.
 
 def index(request):
@@ -10,18 +11,15 @@ def index(request):
     return render(request,'second_app/index.html',date_dict)
 
 def users(request):
-    users_list = Users.objects.order_by('first_name')
-    user_list = {'user_input':users_list}
-    return render(request,'second_app/users.html',user_list)
+    form = NewForms()
 
-def form_name(request):
-    form = forms.FormName()
-    if request.method == "POST":
-        form = forms.FormName(request.POST)
-
+    if request.method == 'POST':
+        form = NewForms(request.POST)
+        
         if form.is_valid():
-            print("Validation success!")
-            print("Name: ",form.cleaned_data['name'])
-            print("Email: ",form.cleaned_data['email'])
-            print("Text: ",form.cleaned_data['text'])
-    return render(request,'second_app/forms_page.html',{'form':form})
+            form.save(commit=True)
+            return index(request)
+        else:
+            print("ERROR FORM INVALID")
+
+    return render(request,'second_app/users.html',{'form':form})

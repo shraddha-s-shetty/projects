@@ -21,5 +21,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     re_path(r'', include('second_app.urls')),
     path("users/", include('second_app.urls')),
-    path("forms/", include('second_app.urls')),
+    #path("forms/", include('second_app.urls')),
 ]
