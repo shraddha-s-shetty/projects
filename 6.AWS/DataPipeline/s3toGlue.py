@@ -31,23 +31,12 @@ class GlueManager:
         else:
             return True
         
-    def check_crawler_existence(crawler_name):
+    def check_crawler_existence(self,crawler_name):
         try:
             response = self.glue_client.get_crawler(Name=crawler_name)
             return True  # Crawler exists
         except self.glue_client.exceptions.EntityNotFoundException:
             return False
-    # Create a crawler for an S3 folder
-    def get_crawler_details(crawler_name):
-        try:
-            response = self.glue_client.get_crawler(Name=crawler_name)
-            return response['Crawler'] if 'Crawler' in response else None
-        except self.glue_client.exceptions.EntityNotFoundException:
-            print(f"Error: Crawler '{crawler_name}' not found.")
-            return None
-        except Exception as e:
-            print(f"Error: {e}")
-            return None
         
     def cralwer_runner(self,s3_bucket,s3_parent_folder,s3_folder,database_name):
         crawler_name = s3_parent_folder.lower() + s3_folder
@@ -74,36 +63,56 @@ class GlueManager:
                 print("Crawler created successfully")
             else:
                 raise ValueError("Error while creating crawler")
-            
-        cralwer_run_status = self.check_run_crawler_status(self,crawler_name)
-        if cralwer_run_status:
+        else:
+            raise ValueError("Crawler not created error!")
+        if self.check_run_crawler_status(crawler_name):
             try:    
                 cralwer_resp = self.glue_client.start_crawler(Name=crawler_name)
-                cralwer_run_status = self.check_run_crawler_status(self,crawler_name)
-                if cralwer_run_status:
+                if self.check_run_crawler_status(crawler_name):
                     return cralwer_resp
             except Exception as e:
                 raise e
+        else:
+            raise ValueError("Crawler start issue!")
+        
     def check_run_crawler_status(self,crawler_name): 
-        try:
-            response = self.glue_client.get_crawler(Name=crawler_name)
-            crawler_status = response['Crawler']['State']
-        except self.glue_client.exceptions.EntityNotFoundException:
-            raise ValueError("Crawler not found!")
         ###Check crawler status and wait if crawler is running
         while True:
+            try:
+                response = self.glue_client.get_crawler(Name=crawler_name)
+                crawler_status = response['Crawler']['State']
+                print(f"Crawler status is {crawler_status}")
+            except self.glue_client.exceptions.EntityNotFoundException:
+                raise ValueError("Crawler not found!")
             if crawler_status is None or crawler_status == 'READY':
                 print(f"Crawler {crawler_name} is not running or finished.")
                 # Start the crawler if it's not running
                 return True
-                break
             elif crawler_status == 'RUNNING':
                 print(f"Crawler {crawler_name} is still running. Waiting...")
                 time.sleep(30)  # Wait for 30 seconds before checking again
             else:
                 print(f"Unexpected status: {crawler_status}")
                 return False
+    
+    def get_all_glue_tables(self,database_name):
+        next_token = None
+        tbl_list = []
+        while True:
+            # Retrieve tables from the Glue Data Catalog with pagination
+            response = self.glue_client.get_tables(DatabaseName=database_name, NextToken=next_token)
+            
+            tables = response['TableList']
+            tbl_list.append(tables)
+                
+            # Check if there are more pages of results
+            if 'NextToken' in response:
+                next_token = response['NextToken']
+            else:
                 break
+        return tbl_list
+        
+
 class DynamoManager:
 
     def __init__(self):
@@ -149,10 +158,24 @@ if __name__ == '__main__':
         crawler_response = glue_manager.cralwer_runner(s3_bucket=s3_bucket,s3_parent_folder=s3_parent_folder,s3_folder=item,database_name=glue_database_name)
         print("Crawler run response: ",crawler_response)
     ###########################################################################
+    ###Convert csv files to parquet
+    ###Go to glue tables get csv file classifiers if csv get s3 location 
+    ###Now apply transformations and convert csv to parquet, small files with pandas and large files with pyspark
+    list_glue_tables = glue_manager.get_all_glue_tables(glue_database_name)
+    csv_s3_files = []
+    for item in list_glue_tables:
+        if 'csv' in item['StorageDescriptor']['Location']:
+            csv_s3_files.append(item['StorageDescriptor']['Location'])
+    
+    for item in csv_s3_files:
+        
+
+
+    
 
 
 
 
-# Initialize Glue client
-
+    
+    
 

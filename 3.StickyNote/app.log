@@ -1,343 +1,110 @@
-2023-08-01 15:51:25,003 - INFO - self.connection to Database
-2023-08-01 15:51:27,543 - INFO - self.connection to Database
-2023-08-01 15:51:28,854 - INFO - curr_index:0
-2023-08-01 15:51:29,177 - INFO - No focused window.
-2023-08-01 15:51:29,178 - INFO - No focused window.
-2023-08-01 15:51:29,178 - INFO - No focused window.
-2023-08-01 15:51:31,430 - INFO - No focused window.
-2023-08-01 15:51:31,436 - INFO - No focused window.
-2023-08-01 15:51:31,437 - INFO - No focused window.
-2023-08-01 15:51:31,457 - INFO - No focused window.
-2023-08-01 15:51:31,458 - INFO - No focused window.
-2023-08-01 15:51:34,270 - INFO - No focused window.
-2023-08-01 15:51:34,271 - INFO - No focused window.
-2023-08-01 15:51:34,271 - INFO - No focused window.
-2023-08-01 15:51:34,976 - INFO - Current Window Title: 1
-2023-08-01 15:51:34,976 - INFO - Current Window Title: 1
-2023-08-01 15:51:34,977 - INFO - Current Window Title: 1
-2023-08-01 15:51:43,142 - INFO - Current Window Title: 1
-2023-08-01 15:51:43,142 - INFO - Current Window Title: 1
-2023-08-01 15:51:43,146 - INFO - Current Window Title: 1
-2023-08-01 15:51:49,694 - INFO - Current Window Title: 1
-2023-08-01 15:51:49,694 - INFO - Current Window Title: 1
-2023-08-01 15:51:51,463 - INFO - No focused window.
-2023-08-01 15:51:51,463 - INFO - No focused window.
-2023-08-01 15:51:51,463 - INFO - No focused window.
-2023-08-01 15:51:53,581 - INFO - No focused window.
-2023-08-01 15:51:53,581 - INFO - No focused window.
-2023-08-01 15:51:53,581 - INFO - No focused window.
-2023-08-01 15:51:53,617 - INFO - No focused window.
-2023-08-01 15:51:53,617 - INFO - No focused window.
-2023-08-01 15:55:58,302 - INFO - self.connection to Database
-2023-08-01 15:56:02,621 - INFO - self.connection to Database
-2023-08-01 15:56:02,621 - INFO - self.connection to Database
-2023-08-01 15:56:03,803 - INFO - curr_index:0
-2023-08-01 15:56:09,381 - INFO - self.connection to Database
-2023-08-01 15:56:10,467 - INFO - curr_index:0
-2023-08-01 15:56:10,496 - INFO - Current Window Title: 1
-2023-08-01 15:56:10,498 - INFO - Current Window Title: 1
-2023-08-01 15:56:10,498 - INFO - Current Window Title: 1
-2023-08-01 15:56:11,043 - INFO - Current Window Title: 1
-2023-08-01 15:56:11,043 - INFO - Current Window Title: 1
-2023-08-01 15:56:11,099 - INFO - No focused window.
-2023-08-01 15:56:11,099 - INFO - No focused window.
-2023-08-01 15:56:11,101 - INFO - No focused window.
-2023-08-01 15:56:12,935 - INFO - Current Window Title: 2
-2023-08-01 15:56:12,935 - INFO - Current Window Title: 2
-2023-08-01 15:56:12,935 - INFO - Current Window Title: 2
-2023-08-01 15:56:12,990 - INFO - Current Window Title: 2
-2023-08-01 15:56:12,992 - INFO - Current Window Title: 2
-2023-08-01 15:56:13,351 - INFO - Current Window Title: 2
-2023-08-01 15:56:13,352 - INFO - Current Window Title: 2
-2023-08-01 15:56:18,370 - INFO - Current Window Title: 2
-2023-08-01 15:56:18,370 - INFO - Current Window Title: 2
-2023-08-01 15:56:27,928 - INFO - Current Window Title: 2
-2023-08-01 15:56:27,928 - INFO - Current Window Title: 2
-2023-08-01 15:56:29,981 - INFO - Current Window Title: 2
-2023-08-01 15:56:29,981 - INFO - Current Window Title: 2
-2023-08-01 15:56:29,985 - INFO - Current Window Title: 2
-2023-08-01 15:56:30,514 - INFO - Current Window Title: 2
-2023-08-01 15:56:30,517 - INFO - Current Window Title: 2
-2023-08-01 15:56:32,332 - INFO - Current Window Title: 2
-2023-08-01 15:56:32,332 - INFO - Current Window Title: 2
-2023-08-01 15:56:32,334 - INFO - Current Window Title: 2
-2023-08-01 15:56:32,375 - INFO - Current Window Title: 2
-2023-08-01 15:56:32,376 - INFO - Current Window Title: 2
-2023-08-01 15:56:32,675 - INFO - Current Window Title: 2
-2023-08-01 15:56:32,675 - INFO - Current Window Title: 2
-2023-08-01 15:56:33,989 - INFO - Current Window Title: 2
-2023-08-01 15:56:33,989 - INFO - Current Window Title: 2
-2023-08-01 15:56:33,992 - INFO - Current Window Title: 2
-2023-08-01 15:56:34,512 - INFO - Current Window Title: 2
-2023-08-01 15:56:34,512 - INFO - Current Window Title: 2
-2023-08-01 15:56:37,456 - INFO - No focused window.
-2023-08-01 15:56:37,456 - INFO - No focused window.
-2023-08-01 15:56:37,456 - INFO - No focused window.
-2023-08-01 15:56:38,194 - INFO - No focused window.
-2023-08-01 15:56:38,194 - INFO - No focused window.
-2023-08-01 15:56:38,194 - INFO - No focused window.
-2023-08-01 15:56:40,024 - INFO - No focused window.
-2023-08-01 15:56:40,704 - INFO - No focused window.
-2023-08-01 15:56:40,712 - INFO - No focused window.
-2023-08-01 15:56:40,712 - INFO - No focused window.
-2023-08-01 15:56:43,016 - INFO - Current Window Title: 1
-2023-08-01 15:56:43,019 - INFO - Current Window Title: 1
-2023-08-01 15:56:45,928 - INFO - Current Window Title: 1
-2023-08-01 15:56:45,928 - INFO - Current Window Title: 1
-2023-08-01 15:56:46,370 - INFO - Current Window Title: 1
-2023-08-01 15:56:46,370 - INFO - Current Window Title: 1
-2023-08-01 15:56:48,795 - INFO - No focused window.
-2023-08-01 15:56:48,795 - INFO - No focused window.
-2023-08-01 15:56:48,795 - INFO - No focused window.
-2023-08-01 15:56:54,749 - INFO - No focused window.
-2023-08-01 15:56:54,750 - INFO - No focused window.
-2023-08-01 15:56:54,750 - INFO - No focused window.
-2023-08-01 15:56:54,751 - INFO - No focused window.
-2023-08-01 15:56:54,753 - INFO - No focused window.
-2023-08-01 15:56:57,859 - INFO - self.connection to Database
-2023-08-01 15:57:00,696 - INFO - curr_index:1
-2023-08-01 15:57:03,783 - INFO - Current Window Title: 3
-2023-08-01 15:57:03,783 - INFO - Current Window Title: 3
-2023-08-01 15:57:03,783 - INFO - Current Window Title: 3
-2023-08-01 15:57:08,704 - INFO - Current Window Title: 3
-2023-08-01 15:57:08,706 - INFO - Current Window Title: 3
-2023-08-01 15:57:08,706 - INFO - Current Window Title: 3
-2023-08-01 15:57:08,719 - INFO - Current Window Title: 3
-2023-08-01 15:57:08,720 - INFO - Current Window Title: 3
-2023-08-01 15:57:14,123 - INFO - Current Window Title: 3
-2023-08-01 15:57:14,126 - INFO - Current Window Title: 3
-2023-08-01 15:57:15,454 - INFO - Current Window Title: 3
-2023-08-01 15:57:15,455 - INFO - Current Window Title: 3
-2023-08-01 15:57:15,457 - INFO - Current Window Title: 3
-2023-08-01 15:57:15,716 - INFO - Current Window Title: 3
-2023-08-01 15:57:15,720 - INFO - Current Window Title: 3
-2023-08-01 15:57:17,343 - INFO - Current Window Title: 3
-2023-08-01 15:57:17,343 - INFO - Current Window Title: 3
-2023-08-01 15:57:17,351 - INFO - Current Window Title: 3
-2023-08-01 15:57:20,608 - INFO - No focused window.
-2023-08-01 15:57:20,608 - INFO - No focused window.
-2023-08-01 15:57:20,608 - INFO - No focused window.
-2023-08-01 15:57:22,225 - INFO - No focused window.
-2023-08-01 15:57:22,225 - INFO - No focused window.
-2023-08-01 15:57:22,225 - INFO - No focused window.
-2023-08-01 15:57:22,590 - INFO - No focused window.
-2023-08-01 15:57:22,590 - INFO - No focused window.
-2023-08-01 15:57:25,273 - INFO - self.connection to Database
-2023-08-01 15:57:25,274 - INFO - self.connection to Database
-2023-08-01 15:57:27,291 - INFO - curr_index:3
-2023-08-01 15:57:27,322 - INFO - No focused window.
-2023-08-01 15:57:27,322 - INFO - No focused window.
-2023-08-01 15:57:27,335 - INFO - No focused window.
-2023-08-01 15:57:27,866 - INFO - No focused window.
-2023-08-01 15:57:27,866 - INFO - No focused window.
-2023-08-01 15:57:29,092 - INFO - Current Window Title: 4
-2023-08-01 15:57:29,094 - INFO - Current Window Title: 4
-2023-08-01 15:57:29,094 - INFO - Current Window Title: 4
-2023-08-01 15:57:29,141 - INFO - Current Window Title: 4
-2023-08-01 15:57:29,143 - INFO - Current Window Title: 4
-2023-08-01 15:57:29,485 - INFO - Current Window Title: 4
-2023-08-01 15:57:29,486 - INFO - Current Window Title: 4
-2023-08-01 15:57:31,846 - INFO - Current Window Title: 4
-2023-08-01 15:57:31,846 - INFO - Current Window Title: 4
-2023-08-01 15:57:31,862 - INFO - Current Window Title: 4
-2023-08-01 15:57:32,086 - INFO - Current Window Title: 4
-2023-08-01 15:57:32,094 - INFO - Current Window Title: 4
-2023-08-01 15:57:34,013 - INFO - No focused window.
-2023-08-01 15:57:34,013 - INFO - No focused window.
-2023-08-01 15:57:34,013 - INFO - No focused window.
-2023-08-01 15:57:35,154 - INFO - No focused window.
-2023-08-01 15:57:35,154 - INFO - No focused window.
-2023-08-01 15:57:35,154 - INFO - No focused window.
-2023-08-01 15:57:35,625 - INFO - No focused window.
-2023-08-01 15:57:35,625 - INFO - No focused window.
-2023-08-01 15:57:38,237 - INFO - self.connection to Database
-2023-08-01 15:57:38,239 - INFO - self.connection to Database
-2023-08-01 15:57:39,615 - INFO - curr_index:4
-2023-08-01 15:57:39,644 - INFO - No focused window.
-2023-08-01 15:57:39,644 - INFO - No focused window.
-2023-08-01 15:57:39,664 - INFO - No focused window.
-2023-08-01 15:57:40,200 - INFO - No focused window.
-2023-08-01 15:57:40,200 - INFO - No focused window.
-2023-08-01 15:57:50,890 - INFO - self.connection to Database
-2023-08-01 15:58:52,987 - INFO - self.connection to Database
-2023-08-01 15:58:56,088 - INFO - self.connection to Database
-2023-08-01 15:58:56,088 - INFO - self.connection to Database
-2023-08-01 15:58:57,064 - INFO - curr_index:0
-2023-08-01 15:58:57,099 - INFO - No focused window.
-2023-08-01 15:58:57,100 - INFO - No focused window.
-2023-08-01 15:58:57,110 - INFO - No focused window.
-2023-08-01 15:59:00,175 - INFO - self.connection to Database
-2023-08-01 15:59:01,143 - INFO - curr_index:0
-2023-08-01 15:59:01,160 - INFO - Current Window Title: 1
-2023-08-01 15:59:01,160 - INFO - Current Window Title: 1
-2023-08-01 15:59:01,168 - INFO - Current Window Title: 1
-2023-08-01 15:59:01,619 - INFO - Current Window Title: 1
-2023-08-01 15:59:01,626 - INFO - Current Window Title: 1
-2023-08-01 15:59:01,704 - INFO - No focused window.
-2023-08-01 15:59:01,705 - INFO - No focused window.
-2023-08-01 15:59:01,705 - INFO - No focused window.
-2023-08-01 15:59:02,052 - INFO - No focused window.
-2023-08-01 15:59:02,054 - INFO - No focused window.
-2023-08-01 15:59:04,877 - INFO - Current Window Title: 2
-2023-08-01 15:59:04,878 - INFO - Current Window Title: 2
-2023-08-01 15:59:04,881 - INFO - Current Window Title: 2
-2023-08-01 15:59:12,231 - INFO - Current Window Title: 2
-2023-08-01 15:59:12,235 - INFO - Current Window Title: 2
-2023-08-01 15:59:12,238 - INFO - Current Window Title: 2
-2023-08-01 15:59:13,882 - INFO - Current Window Title: 2
-2023-08-01 15:59:13,884 - INFO - Current Window Title: 2
-2023-08-01 15:59:13,886 - INFO - Current Window Title: 2
-2023-08-01 15:59:15,659 - INFO - Current Window Title: 2
-2023-08-01 15:59:15,661 - INFO - Current Window Title: 2
-2023-08-01 15:59:15,661 - INFO - Current Window Title: 2
-2023-08-01 15:59:15,906 - INFO - Current Window Title: 2
-2023-08-01 15:59:15,909 - INFO - Current Window Title: 2
-2023-08-01 15:59:17,017 - INFO - No focused window.
-2023-08-01 15:59:17,017 - INFO - No focused window.
-2023-08-01 15:59:17,017 - INFO - No focused window.
-2023-08-01 15:59:18,169 - INFO - No focused window.
-2023-08-01 15:59:18,169 - INFO - No focused window.
-2023-08-01 15:59:18,169 - INFO - No focused window.
-2023-08-01 15:59:18,530 - INFO - No focused window.
-2023-08-01 15:59:18,530 - INFO - No focused window.
-2023-08-01 15:59:20,301 - INFO - No focused window.
-2023-08-01 15:59:20,301 - INFO - No focused window.
-2023-08-01 15:59:20,301 - INFO - No focused window.
-2023-08-01 15:59:20,674 - INFO - No focused window.
-2023-08-01 15:59:20,674 - INFO - No focused window.
-2023-08-01 15:59:21,634 - INFO - No focused window.
-2023-08-01 15:59:21,635 - INFO - No focused window.
-2023-08-01 15:59:21,635 - INFO - No focused window.
-2023-08-01 15:59:22,121 - INFO - No focused window.
-2023-08-01 15:59:22,121 - INFO - No focused window.
-2023-08-01 15:59:25,635 - INFO - Current Window Title: 2
-2023-08-01 15:59:25,635 - INFO - Current Window Title: 2
-2023-08-01 15:59:25,637 - INFO - Current Window Title: 2
-2023-08-01 15:59:26,131 - INFO - Current Window Title: 2
-2023-08-01 15:59:26,131 - INFO - Current Window Title: 2
-2023-08-01 15:59:29,254 - INFO - No focused window.
-2023-08-01 15:59:29,255 - INFO - No focused window.
-2023-08-01 15:59:29,255 - INFO - No focused window.
-2023-08-01 15:59:30,338 - INFO - No focused window.
-2023-08-01 15:59:30,338 - INFO - No focused window.
-2023-08-01 15:59:30,338 - INFO - No focused window.
-2023-08-01 15:59:31,661 - INFO - Current Window Title: 2
-2023-08-01 15:59:31,663 - INFO - Current Window Title: 2
-2023-08-01 15:59:32,120 - INFO - No focused window.
-2023-08-01 15:59:32,120 - INFO - No focused window.
-2023-08-01 15:59:32,121 - INFO - No focused window.
-2023-08-01 15:59:35,187 - INFO - Current Window Title: 1
-2023-08-01 15:59:35,187 - INFO - Current Window Title: 1
-2023-08-01 15:59:35,190 - INFO - Current Window Title: 1
-2023-08-01 15:59:36,922 - INFO - Current Window Title: 1
-2023-08-01 15:59:36,922 - INFO - Current Window Title: 1
-2023-08-01 15:59:38,353 - INFO - Current Window Title: 1
-2023-08-01 15:59:38,355 - INFO - Current Window Title: 1
-2023-08-01 15:59:38,355 - INFO - Current Window Title: 1
-2023-08-01 15:59:41,000 - INFO - No focused window.
-2023-08-01 15:59:41,004 - INFO - No focused window.
-2023-08-01 15:59:41,004 - INFO - No focused window.
-2023-08-01 15:59:42,618 - INFO - No focused window.
-2023-08-01 15:59:42,618 - INFO - No focused window.
-2023-08-01 15:59:42,621 - INFO - No focused window.
-2023-08-01 15:59:43,468 - INFO - No focused window.
-2023-08-01 15:59:43,468 - INFO - No focused window.
-2023-08-01 15:59:43,468 - INFO - No focused window.
-2023-08-01 15:59:46,824 - INFO - Current Window Title: 2
-2023-08-01 15:59:46,824 - INFO - Current Window Title: 2
-2023-08-01 15:59:48,351 - INFO - No focused window.
-2023-08-01 15:59:48,351 - INFO - No focused window.
-2023-08-01 15:59:48,351 - INFO - No focused window.
-2023-08-01 15:59:49,469 - INFO - No focused window.
-2023-08-01 15:59:49,469 - INFO - No focused window.
-2023-08-01 15:59:49,469 - INFO - No focused window.
-2023-08-01 15:59:49,642 - INFO - No focused window.
-2023-08-01 15:59:49,644 - INFO - No focused window.
-2023-08-01 15:59:51,184 - INFO - self.connection to Database
-2023-08-01 15:59:51,185 - INFO - self.connection to Database
-2023-08-01 15:59:52,318 - INFO - curr_index:2
-2023-08-01 15:59:52,333 - INFO - No focused window.
-2023-08-01 15:59:52,333 - INFO - No focused window.
-2023-08-01 15:59:52,349 - INFO - No focused window.
-2023-08-01 15:59:52,898 - INFO - No focused window.
-2023-08-01 15:59:52,898 - INFO - No focused window.
-2023-08-01 15:59:59,460 - INFO - Current Window Title: 3
-2023-08-01 15:59:59,461 - INFO - Current Window Title: 3
-2023-08-01 15:59:59,462 - INFO - Current Window Title: 3
-2023-08-01 16:00:00,493 - INFO - Current Window Title: 3
-2023-08-01 16:00:00,493 - INFO - Current Window Title: 3
-2023-08-01 16:00:00,495 - INFO - Current Window Title: 3
-2023-08-01 16:00:02,629 - INFO - Current Window Title: 3
-2023-08-01 16:00:02,629 - INFO - Current Window Title: 3
-2023-08-01 16:00:02,629 - INFO - Current Window Title: 3
-2023-08-01 16:00:05,796 - INFO - No focused window.
-2023-08-01 16:00:05,796 - INFO - No focused window.
-2023-08-01 16:00:05,796 - INFO - No focused window.
-2023-08-01 16:00:06,930 - INFO - No focused window.
-2023-08-01 16:00:06,930 - INFO - No focused window.
-2023-08-01 16:00:06,932 - INFO - No focused window.
-2023-08-01 16:00:07,352 - INFO - No focused window.
-2023-08-01 16:00:07,352 - INFO - No focused window.
-2023-08-01 16:00:09,319 - INFO - self.connection to Database
-2023-08-01 16:00:09,321 - INFO - self.connection to Database
-2023-08-01 16:00:10,325 - INFO - curr_index:3
-2023-08-01 16:00:10,327 - INFO - self.connection to Database
-2023-08-01 16:00:10,328 - INFO - self.connection to Database
-2023-08-01 16:00:11,267 - INFO - curr_index:3
-2023-08-01 16:00:11,314 - INFO - No focused window.
-2023-08-01 16:00:11,317 - INFO - No focused window.
-2023-08-01 16:00:11,317 - INFO - No focused window.
-2023-08-01 16:00:11,865 - INFO - No focused window.
-2023-08-01 16:00:11,865 - INFO - No focused window.
-2023-08-01 16:00:15,549 - INFO - Current Window Title: 5
-2023-08-01 16:00:15,549 - INFO - Current Window Title: 5
-2023-08-01 16:00:15,551 - INFO - Current Window Title: 5
-2023-08-01 16:00:15,585 - INFO - Current Window Title: 5
-2023-08-01 16:00:15,586 - INFO - Current Window Title: 5
-2023-08-01 16:00:16,174 - INFO - Current Window Title: 5
-2023-08-01 16:00:16,175 - INFO - Current Window Title: 5
-2023-08-01 16:00:21,847 - INFO - No focused window.
-2023-08-01 16:00:21,847 - INFO - No focused window.
-2023-08-01 16:00:21,847 - INFO - No focused window.
-2023-08-01 16:00:23,415 - INFO - No focused window.
-2023-08-01 16:00:23,416 - INFO - No focused window.
-2023-08-01 16:00:23,416 - INFO - No focused window.
-2023-08-01 16:00:23,802 - INFO - No focused window.
-2023-08-01 16:00:23,802 - INFO - No focused window.
-2023-08-01 16:00:25,821 - INFO - Current Window Title: 5
-2023-08-01 16:00:25,822 - INFO - Current Window Title: 5
-2023-08-01 16:00:25,824 - INFO - Current Window Title: 5
-2023-08-01 16:00:27,767 - INFO - No focused window.
-2023-08-01 16:00:27,767 - INFO - No focused window.
-2023-08-01 16:00:27,767 - INFO - No focused window.
-2023-08-01 16:00:30,269 - INFO - No focused window.
-2023-08-01 16:00:30,269 - INFO - No focused window.
-2023-08-01 16:00:30,270 - INFO - No focused window.
-2023-08-01 16:00:30,274 - INFO - No focused window.
-2023-08-01 16:00:30,275 - INFO - No focused window.
-2023-08-01 16:00:32,388 - INFO - self.connection to Database
-2023-08-01 16:00:32,388 - INFO - self.connection to Database
-2023-08-01 16:00:33,503 - INFO - curr_index:5
-2023-08-01 16:00:33,526 - INFO - No focused window.
-2023-08-01 16:00:33,526 - INFO - No focused window.
-2023-08-01 16:00:33,535 - INFO - No focused window.
-2023-08-01 16:00:34,122 - INFO - No focused window.
-2023-08-01 16:00:34,125 - INFO - No focused window.
-2023-08-01 16:00:37,362 - INFO - No focused window.
-2023-08-01 16:00:37,362 - INFO - No focused window.
-2023-08-01 16:00:37,362 - INFO - No focused window.
-2023-08-01 16:00:38,742 - INFO - No focused window.
-2023-08-01 16:00:38,742 - INFO - No focused window.
-2023-08-01 16:00:38,743 - INFO - No focused window.
-2023-08-01 16:00:41,006 - INFO - Current Window Title: 6
-2023-08-01 16:00:41,006 - INFO - Current Window Title: 6
-2023-08-01 16:00:43,901 - INFO - No focused window.
-2023-08-01 16:00:43,901 - INFO - No focused window.
-2023-08-01 16:00:43,901 - INFO - No focused window.
-2023-08-01 16:01:01,672 - INFO - self.connection to Database
-2023-08-01 16:01:05,062 - INFO - self.connection to Database
-2023-08-01 16:01:05,063 - INFO - self.connection to Database
-2023-08-01 16:01:06,023 - INFO - curr_index:0
-2023-08-01 16:01:06,033 - INFO - self.connection to Database
-2023-08-01 16:01:06,034 - INFO - self.connection to Database
-2023-08-01 16:01:06,972 - INFO - curr_index:0
+2023-12-15 18:47:44,352 - INFO - self.connection to Database
+2023-12-15 18:47:49,842 - INFO - self.connection to Database
+2023-12-15 18:47:51,036 - INFO - curr_index:0
+2023-12-15 18:47:54,005 - INFO - No focused window.
+2023-12-15 18:47:54,005 - INFO - No focused window.
+2023-12-15 18:47:54,005 - INFO - No focused window.
+2023-12-15 18:47:54,113 - INFO - No focused window.
+2023-12-15 18:47:54,113 - INFO - No focused window.
+2023-12-15 18:48:04,697 - INFO - No focused window.
+2023-12-15 18:48:04,697 - INFO - No focused window.
+2023-12-15 18:48:04,698 - INFO - No focused window.
+2023-12-15 18:48:04,717 - INFO - No focused window.
+2023-12-15 18:48:04,717 - INFO - No focused window.
+2023-12-15 18:48:13,304 - INFO - Current Window Title: 1
+2023-12-15 18:48:13,304 - INFO - Current Window Title: 1
+2023-12-15 18:48:13,304 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,454 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,455 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,518 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,518 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,767 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,767 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,909 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,909 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,910 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,958 - INFO - Current Window Title: 1
+2023-12-15 18:48:15,958 - INFO - Current Window Title: 1
+2023-12-15 18:48:21,797 - INFO - Current Window Title: 1
+2023-12-15 18:48:21,798 - INFO - Current Window Title: 1
+2023-12-15 18:48:21,798 - INFO - Current Window Title: 1
+2023-12-15 18:48:26,599 - INFO - Current Window Title: 1
+2023-12-15 18:48:26,599 - INFO - Current Window Title: 1
+2023-12-15 18:48:28,181 - INFO - No focused window.
+2023-12-15 18:48:28,183 - INFO - No focused window.
+2023-12-15 18:48:28,183 - INFO - No focused window.
+2023-12-15 18:48:32,081 - INFO - Current Window Title: 1
+2023-12-15 18:48:32,081 - INFO - Current Window Title: 1
+2023-12-15 18:48:32,082 - INFO - Current Window Title: 1
+2023-12-15 18:48:34,063 - INFO - Current Window Title: 1
+2023-12-15 18:48:34,063 - INFO - Current Window Title: 1
+2023-12-15 18:48:37,331 - INFO - Current Window Title: 1
+2023-12-15 18:48:37,331 - INFO - Current Window Title: 1
+2023-12-15 18:48:37,331 - INFO - Current Window Title: 1
+2023-12-15 18:48:37,844 - INFO - Current Window Title: 1
+2023-12-15 18:48:37,844 - INFO - Current Window Title: 1
+2023-12-15 18:48:39,708 - INFO - Current Window Title: 1
+2023-12-15 18:48:39,708 - INFO - Current Window Title: 1
+2023-12-15 18:48:39,709 - INFO - Current Window Title: 1
+2023-12-15 18:48:40,397 - INFO - Current Window Title: 1
+2023-12-15 18:48:40,397 - INFO - Current Window Title: 1
+2023-12-15 18:48:42,341 - INFO - Current Window Title: 1
+2023-12-15 18:48:42,349 - INFO - Current Window Title: 1
+2023-12-15 18:48:42,349 - INFO - Current Window Title: 1
+2023-12-15 18:48:43,489 - INFO - Current Window Title: 1
+2023-12-15 18:48:43,490 - INFO - Current Window Title: 1
+2023-12-15 18:48:43,587 - INFO - Current Window Title: 1
+2023-12-15 18:48:43,587 - INFO - Current Window Title: 1
+2023-12-15 18:48:45,822 - INFO - No focused window.
+2023-12-15 18:48:45,822 - INFO - No focused window.
+2023-12-15 18:48:45,822 - INFO - No focused window.
+2023-12-15 18:48:48,628 - INFO - Current Window Title: 1
+2023-12-15 18:48:48,632 - INFO - Current Window Title: 1
+2023-12-15 18:48:48,634 - INFO - Current Window Title: 1
+2023-12-15 18:48:49,351 - INFO - Current Window Title: 1
+2023-12-15 18:48:49,351 - INFO - Current Window Title: 1
+2023-12-15 18:48:49,936 - INFO - Current Window Title: 1
+2023-12-15 18:48:49,936 - INFO - Current Window Title: 1
+2023-12-15 18:48:49,936 - INFO - Current Window Title: 1
+2023-12-15 18:48:51,799 - INFO - Current Window Title: 1
+2023-12-15 18:48:51,806 - INFO - Current Window Title: 1
+2023-12-15 18:48:53,175 - INFO - Current Window Title: 1
+2023-12-15 18:48:53,175 - INFO - Current Window Title: 1
+2023-12-15 18:48:55,205 - INFO - No focused window.
+2023-12-15 18:48:55,205 - INFO - No focused window.
+2023-12-15 18:48:55,205 - INFO - No focused window.
+2023-12-15 18:49:01,630 - INFO - self.connection to Database
+2023-12-15 18:49:05,805 - INFO - self.connection to Database
+2023-12-15 18:49:05,805 - INFO - self.connection to Database
+2023-12-15 18:49:06,987 - INFO - curr_index:0
+2023-12-15 18:49:06,994 - INFO - self.connection to Database
+2023-12-15 18:49:06,994 - INFO - self.connection to Database
+2023-12-15 18:49:08,203 - INFO - curr_index:0
+2023-12-15 18:49:08,203 - INFO - self.connection to Database
+2023-12-15 18:49:08,208 - INFO - self.connection to Database
+2023-12-15 18:49:09,372 - INFO - curr_index:0
+2023-12-15 18:49:09,639 - INFO - self.connection to Database
+2023-12-15 18:49:09,639 - INFO - self.connection to Database
+2023-12-15 18:49:10,960 - INFO - curr_index:0
+2023-12-15 18:49:11,022 - INFO - Current Window Title: 4
+2023-12-15 18:49:11,022 - INFO - Current Window Title: 4
+2023-12-15 18:49:11,022 - INFO - Current Window Title: 4
+2023-12-15 18:49:11,729 - INFO - No focused window.
+2023-12-15 18:49:11,730 - INFO - No focused window.
+2023-12-15 18:49:11,730 - INFO - No focused window.
+2023-12-15 18:49:11,779 - INFO - Current Window Title: 4
+2023-12-15 18:49:11,780 - INFO - Current Window Title: 4
+2023-12-15 18:49:11,780 - INFO - Current Window Title: 4
+2023-12-15 18:49:11,899 - INFO - Current Window Title: 4
+2023-12-15 18:49:11,900 - INFO - Current Window Title: 4
+2023-12-15 18:49:14,167 - INFO - No focused window.
+2023-12-15 18:49:14,169 - INFO - No focused window.
+2023-12-15 18:49:14,169 - INFO - No focused window.
+2023-12-15 18:49:17,297 - INFO - self.connection to Database
+2023-12-15 18:49:17,298 - INFO - self.connection to Database
+2023-12-15 18:49:18,366 - INFO - curr_index:4
+2023-12-15 18:49:18,388 - INFO - No focused window.
+2023-12-15 18:49:18,412 - INFO - No focused window.
+2023-12-15 18:49:18,414 - INFO - No focused window.
+2023-12-15 18:49:19,053 - INFO - No focused window.
+2023-12-15 18:49:19,055 - INFO - No focused window.
